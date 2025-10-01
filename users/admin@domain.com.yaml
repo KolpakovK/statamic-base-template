@@ -1,0 +1,15 @@
+super: true
+id: f9af95ec-86dd-4779-927c-e2e325f894ee
+password_hash: $2y$12$/mYgxCWnfcC9jpiVUjdX7eYAAHQyISiPTAQmn5rqyl.62WIB4jZHC
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
+  assets:
+    assets:
+      columns:
+        - basename
+        - size
+        - last_modified
+        - alt
+      mode: grid

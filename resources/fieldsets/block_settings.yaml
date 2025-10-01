@@ -1,0 +1,41 @@
+title: 'Block Settings'
+fields:
+  -
+    handle: display_additional_blocks_settings
+    field:
+      type: toggle
+      display: 'Display Additional Blocks Settings'
+  -
+    handle: block_settings
+    field:
+      type: group
+      display: 'Block Settings'
+      if:
+        display_additional_blocks_settings: 'equals true'
+      fields:
+        -
+          handle: block_classes
+          field:
+            type: code
+            display: 'Block Classes'
+            width: 50
+        -
+          handle: block_styles
+          field:
+            mode: css
+            type: code
+            display: 'Block Styles'
+            width: 50
+        -
+          handle: container_classes
+          field:
+            type: code
+            display: 'Container Classes'
+            width: 50
+        -
+          handle: container_styles
+          field:
+            mode: css
+            type: code
+            display: 'Container Styles'
+            width: 50

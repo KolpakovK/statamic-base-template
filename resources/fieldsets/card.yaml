@@ -1,0 +1,16 @@
+title: Card
+fields:
+  -
+    handle: icon
+    field:
+      type: text
+      display: Icon
+      instructions: 'E.g. ti-brand-tabler'
+  -
+    import: picture
+  -
+    import: heading
+  -
+    import: article
+  -
+    import: buttons

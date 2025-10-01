@@ -1,0 +1,9 @@
+title: Heading
+fields:
+  -
+    handle: heading
+    field:
+      type: textarea
+      display: Heading
+      instructions: 'You can use `<br/>` to control line breaks on large screens'
+      antlers: true

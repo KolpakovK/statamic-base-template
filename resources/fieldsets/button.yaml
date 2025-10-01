@@ -1,0 +1,57 @@
+title: Button
+fields:
+  -
+    handle: label
+    field:
+      type: text
+      display: Label
+      width: 50
+  -
+    handle: link
+    field:
+      container: assets
+      type: link
+      display: Link
+      width: 50
+  -
+    handle: variant
+    field:
+      options:
+        -
+          key: primary
+          value: Primary
+        -
+          key: secondary
+          value: Secondary
+        -
+          key: link
+          value: Link
+        -
+          key: ghost
+          value: Ghost
+        -
+          key: outline
+          value: Outline
+        -
+          key: destructive
+          value: Destructive
+      default: primary
+      type: button_group
+      display: 'Button type'
+  -
+    handle: show_icon
+    field:
+      type: toggle
+      display: 'Add icon'
+      instructions: 'Use a class name from ```Tabler Webfont```'
+      width: 33
+  -
+    handle: icon
+    field:
+      type: text
+      display: Icon
+      instructions: 'E.g. ti-brand-tabler'
+      width: 66
+      always_save: false
+      if:
+        show_icon: 'equals true'

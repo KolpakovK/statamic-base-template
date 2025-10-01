@@ -1,0 +1,62 @@
+title: Brand
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Brand
+        fields:
+          -
+            handle: logo
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: Logo
+              width: 50
+          -
+            handle: dark_logo
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: 'Dark Logo'
+              width: 50
+      -
+        display: Favicons
+        fields:
+          -
+            handle: favicon_96x96
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: Favicon-96x96
+          -
+            handle: favicon_svg
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: 'Favicon SVG'
+          -
+            handle: favicon_ico
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: 'Favicon ico'
+          -
+            handle: apple_touch_icon
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: 'Apple touch icon'
+          -
+            handle: manifest
+            field:
+              container: assets
+              max_files: 1
+              type: assets
+              display: Manifest

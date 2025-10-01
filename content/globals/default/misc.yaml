@@ -1,0 +1,22 @@
+navigation_type: main
+buttons:
+  -
+    id: mg43c0qh
+    label: 'Read Docs'
+    variant: secondary
+    show_icon: true
+    type: button
+    enabled: true
+    icon: ti-file-type-doc
+    link: 'entry::6c344b2e-fb45-4cd3-964a-a0755bfb60ea'
+  -
+    id: mg43cal0
+    label: 'Get Started'
+    variant: primary
+    show_icon: true
+    type: button
+    enabled: true
+    icon: ti-rocket
+    link: 'entry::b92ec423-844f-441b-b318-67bb15fce82a'
+caption: 'Production-ready solution for creating modern websites using the latest technologies.'
+footer_details: 'All rights reserved © Snaga - 2025'

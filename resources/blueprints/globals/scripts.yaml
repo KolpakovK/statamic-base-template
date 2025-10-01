@@ -1,0 +1,21 @@
+title: Scripts
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Header Scripts'
+        fields:
+          -
+            handle: header_scripts
+            field:
+              type: code
+              display: 'Header Scripts'
+      -
+        display: 'Footer Scripts'
+        fields:
+          -
+            handle: footer_scripts
+            field:
+              type: code
+              display: 'Footer Scripts'

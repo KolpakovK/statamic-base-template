@@ -1,0 +1,95 @@
+title: SEO
+data:
+  # Page titles
+  site_name: 'Your Website Name'
+  title_separator: ' | '
+  
+  # Environment settings
+  noindex_local: false
+  noindex_staging: true
+  noindex_production: false
+  
+  # Collection defaults
+  collection_defaults:
+    -
+      collection: pages
+      fallback: field
+      field_handle: content
+    -
+      collection: posts
+      fallback: custom_text
+      custom_text: 'Read our latest blog posts and insights'
+  
+  # Hreflang
+  hreflang_auto: true
+  
+  # JSON-LD Schema
+  json_ld_type: organization
+  organization_name: 'Your Organization'
+  organization_logo: null
+  person_name: null
+  json_ld: null
+  
+  # Breadcrumbs
+  breadcrumbs: true
+  
+  # Social defaults
+  og_image: null
+  twitter_image: null
+  twitter_handle: '@yourhandle'
+  
+  # Sitemap
+  sitemap_collections:
+    - pages
+  
+  # Trackers
+  trackers_local: false
+  trackers_staging: false
+  trackers_production: true
+  
+  # Site verification
+  use_google_site_verification: false
+  google_site_verification: null
+  
+  # Analytics
+  use_fathom: false
+  fathom_use_custom_domain: false
+  fathom: null
+  fathom_custom_script_url: null
+  
+  use_cloudflare_web_analytics: false
+  cloudflare_web_analytics: null
+  
+  # Google tracking
+  tracker_type: none
+  google_analytics: null
+  anonymize_ip: true
+  google_tag_manager: null
+  use_cookie_dialog: false
+  
+  # Cookie dialog settings
+  cookie:
+    consent_revoke_before: null
+    title: 'We use cookies'
+    description: 'We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.'
+    accept_label: 'Accept All'
+    reject_label: 'Reject All'
+    accept_selected_label: 'Accept Selected'
+    settings_label: 'Settings'
+    reset_consent_label: 'Reset Consent'
+    consent_types:
+      -
+        _type: functional
+        label: 'Functional'
+        description: 'These cookies are necessary for the website to function properly.'
+        value: true
+        consent_api: false
+        name: 'functionalCookies'
+      -
+        _type: analytics
+        label: 'Analytics'
+        description: 'We use Google Analytics to understand how you use our website.'
+        value: false
+        consent_api: true
+        name: 'analyticsStorage'
+        consent_api_handle: 'analytics_storage'

@@ -1,0 +1,7 @@
+title: Text
+fields:
+  -
+    handle: text
+    field:
+      type: textarea
+      display: Text

@@ -1,0 +1,485 @@
+title: Blocks
+fields:
+  -
+    handle: blocks
+    field:
+      type: replicator
+      display: Blocks
+      instructions: 'Build your page by using various predefined content models.'
+      collapse: true
+      sets:
+        hero:
+          display: Hero
+          instructions: 'Above-the-fold intro blocks'
+          icon: align-object-top
+          sets:
+            simple_hero:
+              display: 'Simple Hero'
+              icon: align-object-top
+              fields:
+                -
+                  import: heading
+                -
+                  import: text
+                -
+                  import: buttons
+                -
+                  import: picture
+                -
+                  import: block_settings
+        content:
+          display: Content
+          instructions: 'Article, Collections, FAQs, search'
+          icon: media-news-paper
+          sets:
+            blog_grid:
+              display: 'Blog Grid'
+              icon: media-news-paper
+              fields:
+                -
+                  handle: query
+                  field:
+                    options:
+                      -
+                        key: latest
+                        value: 'Latest posts'
+                      -
+                        key: featured
+                        value: 'Featured posts'
+                      -
+                        key: custom
+                        value: 'Custom query'
+                    default: latest
+                    type: button_group
+                    display: Query
+                -
+                  handle: entries
+                  field:
+                    collections:
+                      - posts
+                    type: entries
+                    display: Entries
+                    if:
+                      query: 'equals custom'
+                -
+                  handle: limit
+                  field:
+                    default: '4'
+                    type: text
+                    display: Limit
+                    unless:
+                      query: 'equals custom'
+                -
+                  import: block_settings
+            blog_paginated:
+              display: 'Blog Paginated'
+              icon: page-width-normal
+              fields:
+                -
+                  handle: limit
+                  field:
+                    placeholder: '12'
+                    type: text
+                    display: Limit
+                -
+                  import: block_settings
+            article:
+              display: Article
+              instructions: 'Long form content with rich media'
+              icon: text-formatting-markdown
+              fields:
+                -
+                  import: article
+                -
+                  import: block_settings
+            testimonials:
+              display: Testimonials
+              icon: favorite-star-badge
+              fields:
+                -
+                  import: heading
+                -
+                  import: article
+                -
+                  import: buttons
+                -
+                  handle: testimonials
+                  field:
+                    button_label: 'Add Testimonial'
+                    type: replicator
+                    display: Testimonials
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          testimonial:
+                            display: Testimonial
+                            fields:
+                              -
+                                import: article
+                              -
+                                handle: author
+                                field:
+                                  type: text
+                                  display: Author
+                                  width: 50
+                              -
+                                handle: position
+                                field:
+                                  type: text
+                                  display: Position
+                                  width: 50
+                -
+                  import: block_settings
+        feature:
+          display: Feature
+          icon: ai-spark
+          sets:
+            one_column:
+              display: 'One column'
+              icon: align-object-center
+              fields:
+                -
+                  handle: block_layout
+                  field:
+                    options:
+                      -
+                        key: left
+                        value: 'Left aligned content'
+                      -
+                        key: center
+                        value: 'Center aligned content'
+                    default: left
+                    type: button_group
+                    display: 'Block Layout'
+                -
+                  import: heading
+                -
+                  import: article
+                -
+                  import: buttons
+                -
+                  handle: cards_columns
+                  field:
+                    max: 6
+                    type: range
+                    display: 'Cards Columns'
+                    default: 1
+                -
+                  handle: cards
+                  field:
+                    button_label: 'Add Card'
+                    type: replicator
+                    display: Cards
+                    collapse: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          card:
+                            display: Card
+                            fields:
+                              -
+                                import: card
+                -
+                  import: picture
+                -
+                  import: block_settings
+            two_collumns_with_image:
+              display: 'Two collumns with image'
+              icon: layout-two-columns
+              fields:
+                -
+                  handle: block_layout
+                  field:
+                    options:
+                      -
+                        key: left
+                        value: 'Image left'
+                      -
+                        key: right
+                        value: 'Image right'
+                    type: button_group
+                    display: 'Block Layout'
+                    default: left
+                -
+                  import: heading
+                -
+                  import: article
+                -
+                  import: buttons
+                -
+                  handle: cards_columns
+                  field:
+                    max: 6
+                    type: range
+                    display: 'Cards Columns'
+                    default: 1
+                -
+                  handle: cards
+                  field:
+                    button_label: 'Add Card'
+                    type: replicator
+                    display: Cards
+                    collapse: true
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          card:
+                            display: Card
+                            fields:
+                              -
+                                import: card
+                -
+                  import: picture
+                -
+                  import: block_settings
+            manual_columns:
+              display: 'Manual Columns'
+              icon: add-col-after
+              fields:
+                -
+                  handle: amount_columns
+                  field:
+                    max: 6
+                    default: 1
+                    type: range
+                    display: 'Amount Columns'
+                -
+                  handle: columns
+                  field:
+                    collapse: true
+                    button_label: 'Add Column'
+                    type: replicator
+                    display: Columns
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          generic:
+                            display: Generic
+                            icon: hero-image-above-text
+                            fields:
+                              -
+                                handle: col_span
+                                field:
+                                  input_type: number
+                                  default: '1'
+                                  type: text
+                                  display: 'Col Span'
+                                  width: 50
+                              -
+                                import: heading
+                              -
+                                import: article
+                              -
+                                import: buttons
+                              -
+                                handle: cards_group
+                                field:
+                                  type: group
+                                  display: Cards
+                                  fields:
+                                    -
+                                      handle: cards_columns
+                                      field:
+                                        max: 6
+                                        default: 1
+                                        type: range
+                                        display: 'Cards Columns'
+                                        width: 50
+                                    -
+                                      handle: cards
+                                      field:
+                                        collapse: true
+                                        button_label: 'Add Card'
+                                        type: replicator
+                                        display: Cards
+                                        sets:
+                                          new_set_group:
+                                            display: 'New Set Group'
+                                            sets:
+                                              card:
+                                                display: Card
+                                                fields:
+                                                  -
+                                                    import: card
+                          cards_grid:
+                            display: 'Cards Grid'
+                            icon: container-add
+                            fields:
+                              -
+                                handle: col_span
+                                field:
+                                  input_type: number
+                                  default: '1'
+                                  type: text
+                                  display: 'Col Span'
+                                  width: 50
+                              -
+                                handle: amount_columns
+                                field:
+                                  max: 6
+                                  default: 1
+                                  type: range
+                                  display: 'Amount Columns'
+                              -
+                                handle: cards
+                                field:
+                                  collapse: true
+                                  button_label: 'Add Card'
+                                  type: replicator
+                                  display: Cards
+                                  sets:
+                                    new_set_group:
+                                      display: 'New Set Group'
+                                      sets:
+                                        card:
+                                          display: Card
+                                          fields:
+                                            -
+                                              import: card
+                          image:
+                            display: Image
+                            icon: hero-image-screen-curved
+                            fields:
+                              -
+                                handle: col_span
+                                field:
+                                  input_type: number
+                                  default: '1'
+                                  type: text
+                                  display: 'Col Span'
+                                  width: 50
+                              -
+                                import: picture
+                          form:
+                            display: Form
+                            icon: form-text-field
+                            fields:
+                              -
+                                handle: col_span
+                                field:
+                                  default: '1'
+                                  type: text
+                                  display: 'Col Span'
+                                  width: 50
+                              -
+                                handle: form
+                                field:
+                                  max_items: 1
+                                  type: form
+                                  display: Form
+                -
+                  import: block_settings
+        media:
+          display: Media
+          icon: insert-image
+          sets:
+            picture:
+              display: Picture
+              icon: orientation-image-picture-horitontal-landscape
+              fields:
+                -
+                  import: picture
+                -
+                  import: block_settings
+            running_logos:
+              display: 'Running Logos'
+              icon: social-reddit-logo
+              fields:
+                -
+                  import: text
+                -
+                  handle: logos
+                  field:
+                    container: assets
+                    min_files: 5
+                    type: assets
+                    display: Logos
+                -
+                  import: block_settings
+        actions:
+          display: Actions
+          icon: direction-buttons
+          sets:
+            cta:
+              display: CTA
+              icon: shopping-cart
+              fields:
+                -
+                  handle: block_layout
+                  field:
+                    options:
+                      -
+                        key: main
+                        value: 'Contrast background'
+                      -
+                        key: image
+                        value: 'Image background'
+                      -
+                        key: cards
+                        value: 'Cards on side'
+                    default: main
+                    type: button_group
+                    display: 'Block Layout'
+                -
+                  import: heading
+                -
+                  import: article
+                -
+                  import: buttons
+                -
+                  handle: form
+                  field:
+                    max_items: 1
+                    type: form
+                    display: Form
+                    unless:
+                      block_layout: 'equals cards'
+                -
+                  handle: image
+                  field:
+                    container: assets
+                    max_files: 1
+                    type: assets
+                    display: Image
+                    if:
+                      block_layout: 'equals image'
+                -
+                  handle: cards
+                  field:
+                    collapse: true
+                    button_label: 'Add Card'
+                    type: replicator
+                    display: Cards
+                    if:
+                      block_layout: 'equals cards'
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          card:
+                            display: Card
+                            fields:
+                              -
+                                import: card
+                -
+                  import: block_settings
+        special:
+          display: Special
+          icon: shopping-store-discount-percent
+          sets:
+            documentation:
+              display: Documentation
+              icon: code-block
+              fields:
+                -
+                  handle: navigation
+                  field:
+                    type: navs
+                    display: Navigation
+                    max_items: 1
+                -
+                  import: article

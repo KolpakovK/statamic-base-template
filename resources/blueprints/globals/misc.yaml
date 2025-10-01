@@ -1,0 +1,42 @@
+title: Misc
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: Navigation
+        fields:
+          -
+            handle: navigation_type
+            field:
+              options:
+                -
+                  key: main
+                  value: 'Menu buttons on right'
+                -
+                  key: left
+                  value: 'Menu buttons on left'
+                -
+                  key: center
+                  value: 'Menu buttons on center'
+              default: main
+              type: button_group
+              display: 'Navigation Type'
+          -
+            import: buttons
+      -
+        display: Footer
+        fields:
+          -
+            handle: caption
+            field:
+              type: textarea
+              display: Caption
+          -
+            handle: footer_details
+            field:
+              type: text
+              display: 'Footer Details'
+          -
+            import: buttons
+            prefix: footer_

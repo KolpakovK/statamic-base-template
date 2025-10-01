@@ -1,0 +1,175 @@
+title: Page
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            import: blocks
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+  seo:
+    display: SEO
+    sections:
+      -
+        display: Basic
+        instructions: 'Basic SEO settings'
+        collapsible: true
+        fields:
+          -
+            handle: seo_title
+            field:
+              type: text
+              localizable: true
+              display: 'Page title'
+              character_limit: 70
+              instructions: 'This entries title, defaults to title. Max 70 chars including the site name.'
+          -
+            handle: seo_description
+            field:
+              type: textarea
+              display: 'Meta description'
+              character_limit: 160
+              instructions: 'This entries meta description. Max 160 chars.'
+              rows: 3
+      -
+        display: Advanced
+        instructions: 'Advanced SEO settings'
+        collapsible: true
+        fields:
+          -
+            handle: seo_noindex
+            field:
+              type: toggle
+              instructions: 'Instruct crawlers not to index this entry, also excludes it from the sitemap.xml.'
+              instructions_position: below
+              width: 50
+              display: No-index
+          -
+            handle: seo_nofollow
+            field:
+              type: toggle
+              instructions: 'Instruct crawlers not to follow links on this page.'
+              instructions_position: below
+              width: 50
+              display: No-follow
+          -
+            handle: seo_canonical_type
+            field:
+              options:
+                -
+                  key: entry
+                  value: 'Current entry'
+                -
+                  key: domain
+                  value: 'Current domain'
+                -
+                  key: external
+                  value: 'External domain'
+              display: 'Canonical type'
+              type: button_group
+              default: entry
+              instructions: 'Where should the canonical URL for this entry point to.'
+              listable: false
+          -
+            handle: seo_canonical_domain
+            field:
+              type: entries
+              localizable: true
+              listable: false
+              display: 'Canonical URL'
+              width: 66
+              instructions: 'If this is an entry with duplicate content. Enter the original URL for this content.'
+              max_items: 1
+              validate:
+                - 'required_if:seo_canonical_type,domain'
+              if:
+                seo_canonical_type: 'equals domain'
+          -
+            handle: seo_canonical_external
+            field:
+              input_type: url
+              display: 'Canonical URL'
+              type: text
+              listable: false
+              validate:
+                - 'required_if:seo_canonical_type,external'
+              if:
+                seo_canonical_type: 'equals external'
+      -
+        display: 'Open Graph'
+        instructions: 'Open Graph meta tags for social sharing'
+        collapsible: true
+        fields:
+          -
+            handle: og_title
+            field:
+              type: text
+              localizable: true
+              listable: false
+              display: 'Social title'
+              instructions: 'This entries OG title, defaults to custom SEO title and title. Recommended max 70 chars.'
+              character_limit: 70
+          -
+            handle: og_description
+            field:
+              type: textarea
+              listable: false
+              display: 'Social description'
+              instructions: 'This entries OG description, defaults to meta description. Recommended max 200 chars.'
+              character_limit: 200
+              rows: 3
+          -
+            handle: og_image
+            field:
+              type: assets
+              container: assets
+              mode: grid
+              listable: false
+              display: 'Social image'
+              instructions: 'This entries OG image. Defaults to global site OG image. The recommended size is 1200px x 630px. The image will be focal cropped to this dimension.'
+              instructions_position: below
+              width: 50
+              max_files: 1
+          -
+            handle: twitter_image
+            field:
+              type: assets
+              container: assets
+              mode: grid
+              listable: false
+              display: 'Twitter image'
+              instructions: 'This entries Twitter Summary with large image. Defaults to global site Twitter image. Images should have an aspect ratio of 2:1 with minimum dimensions of 1200 x 600px. This image will be focal cropped to this dimension.'
+              instructions_position: below
+              width: 50
+              max_files: 1
+      -
+        display: 'JSON-ld Schema'
+        instructions: 'Custom JSON-ld schema objects'
+        collapsible: true
+        fields:
+          -
+            handle: schema_jsonld
+            field:
+              type: textarea
+              listable: false
+              display: 'JSON-ld schema'
+              instructions: 'Custom JSON-ld objects. Will be wrapped in the appropriate script tag.'
+              rows: 10

@@ -1,0 +1,52 @@
+tree:
+  -
+    id: 180631cb-79d0-4ebf-a16a-4738df529ff0
+    entry: 6c344b2e-fb45-4cd3-964a-a0755bfb60ea
+  -
+    id: 8f2c1b39-bb50-44f8-9a31-10a253fdda3b
+    entry: b92ec423-844f-441b-b318-67bb15fce82a
+  -
+    id: bcc53d09-3169-4ce5-ab14-a4a5dacfefdd
+    entry: fdb4db30-602c-46a4-9880-40845d39def6
+  -
+    id: 6ffe0d46-a96f-44de-9abc-439196751257
+    entry: e066a071-0add-499d-916d-1b137f36d110
+    title: 'Setting Up the SEO'
+  -
+    id: cea3b494-b07b-4e0f-9c37-ba25ca0d4fac
+    title: Blocks
+    children:
+      -
+        id: e550f9b5-620d-4ba2-ae08-7305f0604b7b
+        entry: 73b7ead4-6002-43d0-b64c-96e93f3139b7
+        title: 'Article Block'
+      -
+        id: 9cb847c1-705c-48a7-93f6-0e76ee3868b5
+        entry: 0f14c7c8-0035-4b85-9940-a110b36bb431
+      -
+        id: afb2bec1-fd0c-4643-a31e-f493c21b6531
+        entry: 54032a22-068a-4f6e-b19b-d6ee9309a759
+      -
+        id: 8d12cba4-e894-4772-b0c3-09ad138417e6
+        entry: 358e2409-98e5-4ec1-924c-a149bc97e6e2
+      -
+        id: 2ca3fda2-2590-439e-b33b-2c1b730098b4
+        entry: 8d8ea975-5b50-4cfd-8622-d53c94a0bf1e
+      -
+        id: 45e7132b-1a3e-4f74-a614-f2207e3e23b9
+        entry: 2d34b1ac-28dd-47a1-81f9-31f48c95a627
+      -
+        id: e6f1efd2-bb9f-436c-887c-d9990fc52f8c
+        entry: 3de6ff66-2e76-417e-a7fa-8e33da335004
+      -
+        id: d96005ba-a9c8-43e0-bf38-8e6a5e4fd679
+        entry: 134f2b91-2ecc-4b17-8a97-55884a7960de
+      -
+        id: d71e71ac-ddd2-46db-9cda-62615c57ae11
+        entry: a825c09d-41e3-4861-afa6-8f0361780a8d
+      -
+        id: 24a3ae07-4f44-434a-9850-7c66c1f598bd
+        entry: 3e96c940-da61-484e-830c-d6226a175703
+      -
+        id: d41ba63a-0b67-4a39-b107-4b0f66b7a5b7
+        entry: c182d79d-6d87-4cd5-af12-e641d6b70f41

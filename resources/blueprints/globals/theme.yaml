@@ -1,0 +1,569 @@
+title: 'Theme Settings'
+tabs:
+  colors:
+    display: Colors
+    sections:
+      -
+        display: 'Background Colors'
+        instructions: 'Configure main background colors for light and dark themes'
+        fields:
+          -
+            handle: background
+            field:
+              type: color
+              display: 'Primary Background'
+              instructions: 'Main background color'
+              default: '#ffffff'
+              width: 33
+          -
+            handle: background_secondary
+            field:
+              type: color
+              display: 'Secondary Background'
+              instructions: 'Secondary background areas'
+              default: '#f8fafc'
+              width: 33
+          -
+            handle: background_muted
+            field:
+              type: color
+              display: 'Muted Background'
+              instructions: 'Subtle background areas'
+              default: '#f1f5f9'
+              width: 33
+          -
+            handle: background_dark
+            field:
+              type: color
+              display: 'Dark Primary Background'
+              instructions: 'Main background for dark mode'
+              default: '#0f172a'
+              width: 33
+          -
+            handle: background_secondary_dark
+            field:
+              type: color
+              display: 'Dark Secondary Background'
+              instructions: 'Secondary background for dark mode'
+              default: '#1e293b'
+              width: 33
+          -
+            handle: background_muted_dark
+            field:
+              type: color
+              display: 'Dark Muted Background'
+              instructions: 'Subtle background for dark mode'
+              default: '#1e293b'
+              width: 33
+      -
+        display: 'Text Colors'
+        instructions: 'Configure text colors for readability and hierarchy'
+        fields:
+          -
+            handle: foreground
+            field:
+              type: color
+              display: 'Primary Text'
+              instructions: 'Main text color'
+              default: '#0f172a'
+              width: 33
+          -
+            handle: foreground_secondary
+            field:
+              type: color
+              display: 'Secondary Text'
+              instructions: 'Secondary text and captions'
+              default: '#64748b'
+              width: 33
+          -
+            handle: foreground_muted
+            field:
+              type: color
+              display: 'Muted Text'
+              instructions: 'Subtle text and placeholders'
+              default: '#94a3b8'
+              width: 33
+          -
+            handle: foreground_dark
+            field:
+              type: color
+              display: 'Dark Primary Text'
+              instructions: 'Main text color for dark mode'
+              default: '#f8fafc'
+              width: 33
+          -
+            handle: foreground_secondary_dark
+            field:
+              type: color
+              display: 'Dark Secondary Text'
+              instructions: 'Secondary text for dark mode'
+              default: '#94a3b8'
+              width: 33
+          -
+            handle: foreground_muted_dark
+            field:
+              type: color
+              display: 'Dark Muted Text'
+              instructions: 'Subtle text for dark mode'
+              default: '#9ca3af'
+              width: 33
+      -
+        display: 'Brand Colors'
+        instructions: 'Primary brand colors and their variants'
+        fields:
+          -
+            handle: primary
+            field:
+              type: color
+              display: 'Primary Color'
+              instructions: 'Main brand color'
+              default: '#1e293b'
+              width: 50
+          -
+            handle: primary_foreground
+            field:
+              type: color
+              display: 'Primary Foreground'
+              instructions: 'Text color on primary background'
+              default: '#f8fafc'
+              width: 50
+          -
+            handle: primary_dark
+            field:
+              type: color
+              display: 'Dark Primary Color'
+              instructions: 'Primary color for dark mode'
+              default: '#f8fafc'
+              width: 50
+          -
+            handle: primary_foreground_dark
+            field:
+              type: color
+              display: 'Dark Primary Foreground'
+              instructions: 'Primary foreground for dark mode'
+              default: '#1e293b'
+              width: 50
+          -
+            handle: primary_hover
+            field:
+              type: color
+              display: 'Primary Hover'
+              instructions: 'Primary color on hover state'
+              default: '#334155'
+              width: 50
+      -
+        display: 'Semantic Colors'
+        instructions: 'Colors for different states and messages'
+        fields:
+          -
+            handle: success
+            field:
+              type: color
+              display: 'Success Color'
+              instructions: 'Success states and positive actions'
+              default: '#22c55e'
+              width: 50
+          -
+            handle: success_foreground
+            field:
+              type: color
+              display: 'Success Foreground'
+              instructions: 'Text on success background'
+              default: '#ffffff'
+              width: 50
+          -
+            handle: success_hover
+            field:
+              type: color
+              display: 'Success Hover'
+              instructions: 'Success color on hover state'
+              default: '#16a34a'
+              width: 50
+          -
+            handle: destructive
+            field:
+              type: color
+              display: 'Error Color'
+              instructions: 'Error states and destructive actions'
+              default: '#ef4444'
+              width: 50
+          -
+            handle: destructive_foreground
+            field:
+              type: color
+              display: 'Error Foreground'
+              instructions: 'Text on error background'
+              default: '#ffffff'
+              width: 50
+          -
+            handle: destructive_hover
+            field:
+              type: color
+              display: 'Error Hover'
+              instructions: 'Error color on hover state'
+              default: '#dc2626'
+              width: 50
+          -
+            handle: info
+            field:
+              type: color
+              display: 'Info Color'
+              instructions: 'Informational messages'
+              default: '#3b82f6'
+              width: 50
+          -
+            handle: info_foreground
+            field:
+              type: color
+              display: 'Info Foreground'
+              instructions: 'Text on info background'
+              default: '#ffffff'
+              width: 50
+          -
+            handle: info_hover
+            field:
+              type: color
+              display: 'Info Hover'
+              instructions: 'Info color on hover state'
+              default: '#2563eb'
+              width: 50
+          -
+            handle: warning
+            field:
+              type: color
+              display: 'Warning Color'
+              instructions: 'Warning states and caution'
+              default: '#eab308'
+              width: 50
+          -
+            handle: warning_foreground
+            field:
+              type: color
+              display: 'Warning Foreground'
+              instructions: 'Text on warning background'
+              default: '#451a03'
+              width: 50
+          -
+            handle: warning_hover
+            field:
+              type: color
+              display: 'Warning Hover'
+              instructions: 'Warning color on hover state'
+              default: '#ca8a04'
+              width: 50
+      -
+        display: 'UI Colors'
+        instructions: 'Colors for borders, cards, and UI elements'
+        fields:
+          -
+            handle: border
+            field:
+              type: color
+              display: 'Border Color'
+              instructions: 'Default border color'
+              default: '#e2e8f0'
+              width: 50
+          -
+            handle: border_dark
+            field:
+              type: color
+              display: 'Dark Border Color'
+              instructions: 'Border color for dark mode'
+              default: '#1e293b'
+              width: 50
+          -
+            handle: card
+            field:
+              type: color
+              display: 'Card Background'
+              instructions: 'Background for cards and panels'
+              default: '#ffffff'
+              width: 50
+          -
+            handle: card_foreground
+            field:
+              type: color
+              display: 'Card Text'
+              instructions: 'Text color on cards'
+              default: '#0f172a'
+              width: 50
+          -
+            handle: muted
+            field:
+              type: color
+              display: 'Muted Background'
+              instructions: 'Subtle UI element backgrounds'
+              default: '#f1f5f9'
+              width: 50
+          -
+            handle: muted_foreground
+            field:
+              type: color
+              display: 'Muted Text'
+              instructions: 'Text on muted backgrounds'
+              default: '#64748b'
+              width: 50
+          -
+            handle: accent
+            field:
+              type: color
+              display: 'Accent Background'
+              instructions: 'Accent color for highlights'
+              default: '#f1f5f9'
+              width: 50
+          -
+            handle: accent_foreground
+            field:
+              type: color
+              display: 'Accent Text'
+              instructions: 'Text on accent backgrounds'
+              default: '#1e293b'
+              width: 50
+  typography:
+    display: Typography
+    sections:
+      -
+        display: 'Font Families'
+        instructions: 'Configure font stacks for different text types'
+        fields:
+          -
+            handle: font_sans
+            field:
+              type: text
+              display: 'Sans Serif Font'
+              instructions: 'Main font family for body text'
+              default: "'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+          -
+            handle: font_serif
+            field:
+              type: text
+              display: 'Serif Font'
+              instructions: 'Font family for headings and emphasis'
+              default: "'Playfair Display', Georgia, Cambria, serif"
+          -
+            handle: font_mono
+            field:
+              type: text
+              display: 'Monospace Font'
+              instructions: 'Font family for code and technical text'
+              default: "'JetBrains Mono', 'Fira Code', Consolas, 'Courier New', monospace"
+      -
+        display: 'Font Sizes'
+        instructions: 'Configure font sizes for consistent typography scale'
+        fields:
+          -
+            handle: font_size_xs
+            field:
+              type: text
+              display: 'Extra Small'
+              instructions: 'Smallest text size (captions, labels)'
+              default: 0.75rem
+          -
+            handle: font_size_sm
+            field:
+              type: text
+              display: Small
+              instructions: 'Small text size (secondary text)'
+              default: 0.875rem
+          -
+            handle: font_size_base
+            field:
+              type: text
+              display: Base
+              instructions: 'Default body text size'
+              default: 1rem
+          -
+            handle: font_size_lg
+            field:
+              type: text
+              display: Large
+              instructions: 'Large text size (leads, intros)'
+              default: 1.125rem
+          -
+            handle: font_size_xl
+            field:
+              type: text
+              display: 'Extra Large'
+              instructions: 'Extra large text size'
+              default: 1.25rem
+          -
+            handle: font_size_2xl
+            field:
+              type: text
+              display: '2X Large'
+              instructions: 'Small headings'
+              default: 1.5rem
+          -
+            handle: font_size_3xl
+            field:
+              type: text
+              display: '3X Large'
+              instructions: 'Medium headings'
+              default: 1.875rem
+          -
+            handle: font_size_4xl
+            field:
+              type: text
+              display: '4X Large'
+              instructions: 'Large headings'
+              default: 2.25rem
+          -
+            handle: font_size_5xl
+            field:
+              type: text
+              display: '5X Large'
+              instructions: 'Extra large headings'
+              default: 3rem
+          -
+            handle: font_size_6xl
+            field:
+              type: text
+              display: '6X Large'
+              instructions: 'Hero headings'
+              default: 3.75rem
+  spacing:
+    display: 'Spacing & Layout'
+    sections:
+      -
+        display: 'Border Radius'
+        instructions: 'Configure border radius values for consistent rounded corners'
+        fields:
+          -
+            handle: radius_button
+            field:
+              type: text
+              display: 'Button Radius'
+              instructions: 'Border radius for buttons'
+              default: 0.375rem
+          -
+            handle: radius_input
+            field:
+              type: text
+              display: 'Input Radius'
+              instructions: 'Border radius for form inputs'
+              default: 0.5rem
+          -
+            handle: radius_panel_sm
+            field:
+              type: text
+              display: 'Small Panel Radius'
+              instructions: 'Border radius for small panels'
+              default: 0.75rem
+          -
+            handle: radius_panel_md
+            field:
+              type: text
+              display: 'Medium Panel Radius'
+              instructions: 'Border radius for medium panels'
+              default: 1rem
+          -
+            handle: radius_panel_lg
+            field:
+              type: text
+              display: 'Large Panel Radius'
+              instructions: 'Border radius for large panels'
+              default: 1.5rem
+      -
+        display: Shadows
+        instructions: 'Configure shadow values for depth and elevation'
+        fields:
+          -
+            handle: shadow_sm
+            field:
+              type: text
+              display: 'Small Shadow'
+              instructions: 'Subtle shadow for small elements'
+              default: '0 1px 2px 0 rgb(0 0 0 / 0.05)'
+          -
+            handle: shadow_md
+            field:
+              type: text
+              display: 'Medium Shadow'
+              instructions: 'Standard shadow for cards'
+              default: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)'
+          -
+            handle: shadow_lg
+            field:
+              type: text
+              display: 'Large Shadow'
+              instructions: 'Prominent shadow for modals'
+              default: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)'
+          -
+            handle: shadow_xl
+            field:
+              type: text
+              display: 'Extra Large Shadow'
+              instructions: 'Maximum shadow for floating elements'
+              default: '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)'
+  animation:
+    display: Animation
+    sections:
+      -
+        display: 'Animation Timing'
+        instructions: 'Configure animation durations for consistent motion'
+        fields:
+          -
+            handle: duration_fast
+            field:
+              type: text
+              display: 'Fast Duration'
+              instructions: 'Quick animations (hover effects)'
+              default: 150ms
+          -
+            handle: duration_normal
+            field:
+              type: text
+              display: 'Normal Duration'
+              instructions: 'Standard animations (transitions)'
+              default: 200ms
+          -
+            handle: duration_slow
+            field:
+              type: text
+              display: 'Slow Duration'
+              instructions: 'Deliberate animations (page transitions)'
+              default: 300ms
+      -
+        display: 'Z-Index Layers'
+        instructions: 'Configure stacking order for overlapping elements'
+        fields:
+          -
+            handle: z_dropdown
+            field:
+              type: integer
+              display: 'Dropdown Z-Index'
+              instructions: 'Z-index for dropdown menus'
+              default: 1000
+          -
+            handle: z_modal
+            field:
+              type: integer
+              display: 'Modal Z-Index'
+              instructions: 'Z-index for modal dialogs'
+              default: 1100
+          -
+            handle: z_popover
+            field:
+              type: integer
+              display: 'Popover Z-Index'
+              instructions: 'Z-index for popovers and tooltips'
+              default: 1200
+          -
+            handle: z_tooltip
+            field:
+              type: integer
+              display: 'Tooltip Z-Index'
+              instructions: 'Z-index for tooltips (highest)'
+              default: 1300
+  css:
+    display: CSS
+    sections:
+      -
+        display: 'Custom code'
+        fields:
+          -
+            handle: custom_css_theme
+            field:
+              mode: css
+              type: code
+              display: 'Custom CSS theme'

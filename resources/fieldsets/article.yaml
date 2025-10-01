@@ -1,0 +1,56 @@
+title: Article
+fields:
+  -
+    handle: article
+    field:
+      buttons:
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6
+        - bold
+        - italic
+        - unorderedlist
+        - orderedlist
+        - removeformat
+        - quote
+        - anchor
+        - table
+        - code
+        - codeblock
+        - horizontalrule
+        - alignleft
+        - aligncenter
+        - alignright
+        - alignjustify
+      reading_time: true
+      word_count: true
+      container: assets
+      always_show_set_button: true
+      remove_empty_nodes: false
+      type: bard
+      display: Content
+      toolbar_mode: floating
+      smart_typography: true
+      sets:
+        media:
+          display: Media
+          icon: insert-image
+          sets:
+            picture:
+              display: Picture
+              icon: insert-image
+              fields:
+                -
+                  import: picture
+        interactive:
+          display: Interactive
+          icon: direction-buttons
+          sets:
+            buttons:
+              display: Buttons
+              icon: direction-buttons
+              fields:
+                -
+                  import: buttons

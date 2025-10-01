@@ -1,0 +1,14 @@
+title: 'Browser appearance'
+data:
+  # Format detection
+  disable_phone_detection: false
+  disable_email_detection: false
+  disable_address_detection: false
+  
+  # Mobile web apps
+  apple_mobile_web_app: false
+  apple_status_bar_black: false
+  android_mobile_web_app: false
+  
+  # Theme color (используется из ваших CSS переменных)
+  theme_color: '#1e293b'

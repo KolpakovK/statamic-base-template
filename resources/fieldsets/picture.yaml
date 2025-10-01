@@ -1,0 +1,46 @@
+title: Picture
+fields:
+  -
+    handle: image
+    field:
+      container: assets
+      max_files: 1
+      type: assets
+      display: Image
+      width: 66
+  -
+    handle: image_scaling
+    field:
+      options:
+        -
+          key: cover
+          value: 'Cover Image'
+        -
+          key: contain
+          value: 'Contain Image'
+      default: cover
+      type: button_group
+      display: 'Image Scaling'
+      width: 33
+  -
+    handle: image_optimization
+    field:
+      type: toggle
+      display: 'Image Optimization'
+      width: 33
+  -
+    handle: image_width
+    field:
+      type: text
+      display: 'Image width'
+      width: 33
+      if:
+        image_optimization: 'equals true'
+  -
+    handle: image_height
+    field:
+      type: text
+      display: 'Image Height'
+      width: 33
+      if:
+        image_optimization: 'equals true'

@@ -1,0 +1,7 @@
+logo: logo/brandlogo.svg
+dark_logo: logo/brandlogo.svg
+favicon_96x96: facicons/favicon-96x96.png
+favicon_svg: facicons/favicon.svg
+favicon_ico: facicons/favicon.ico
+apple_touch_icon: facicons/apple-touch-icon.png
+manifest: facicons/site.webmanifest
