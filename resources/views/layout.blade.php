@@ -38,6 +38,6 @@
 
         {!! $scripts->footer_scripts !!}
 
-        @vite(['resources/js/alpine.min.js'], ['defer' => true])
+        @vite(['resources/js/alpine.min.js'])
     </body>
 </html>
