@@ -53,7 +53,15 @@ return [
     */
 
     'widgets' => [
-        'getting_started',
+        // 'getting_started',
+        [
+            'type' => 'rebuild_styles',
+            'width' => 50,
+        ],
+        [ 
+            'type' => 'updater',
+            'width' => 50,
+        ], 
     ],
 
     /*
