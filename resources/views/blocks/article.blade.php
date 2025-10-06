@@ -1,4 +1,4 @@
-<div class="wrapper article-wrapper {{ $block->block_settings->block_classes ?? '' }}">
+<div class="wrapper article-wrapper {{ $block->block_settings->block_classes ?? '' }}" id="{{ $block->block_settings->block_id ?? '' }}">
     <section class="block article-section article-block" style="{{ $block->block_settings->block_styles ?? '' }}">
         <div class="container article-container {{ $block->block_settings->container_classes ?? '' }}"
             style="{{ $block->block_settings->container_styles ?? '' }}">

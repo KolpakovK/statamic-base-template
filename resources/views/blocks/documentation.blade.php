@@ -1,4 +1,4 @@
-<div class="wrapper documentation-wrapper {{ $block->block_settings->block_classes ?? '' }}">
+<div class="wrapper documentation-wrapper {{ $block->block_settings->block_classes ?? '' }}" id="{{ $block->block_settings->block_id ?? '' }}">
     <section class="block documentation-block" style="{{ $block->block_settings->block_styles ?? '' }}">
         <div class="container documentation-container py-8 {{ $block->block_settings->container_classes ?? '' }}" style="{{ $block->block_settings->container_styles ?? '' }}">
             <div class="grid grid-cols-1 lg:grid-cols-8 gap-8">

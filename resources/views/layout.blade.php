@@ -38,6 +38,15 @@
 
         {!! $scripts->footer_scripts !!}
 
+        @if($misc->modals)
+            @foreach($misc->modals as $modal)
+                <x-modal 
+                    :modal_id="$modal['modal_id']" 
+                    :blocks="$modal['modal_blocks'] ?? null" 
+                />
+            @endforeach
+        @endif
+
         @vite(['resources/js/alpine.min.js'])
     </body>
 </html>

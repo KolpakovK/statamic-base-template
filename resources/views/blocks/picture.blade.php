@@ -1,4 +1,4 @@
-<div class="wrapper picture-wrapper {{ $block->block_settings->block_classes ?? '' }}">
+<div class="wrapper picture-wrapper {{ $block->block_settings->block_classes ?? '' }}" id="{{ $block->block_settings->block_id ?? '' }}">
     <section class="block picture-block" style="{{ $block->block_settings->block_styles ?? '' }}">
         <div class="container picture-container py-8 {{ $block->block_settings->container_classes ?? '' }}" style="{{ $block->block_settings->container_styles ?? '' }}">
             @if($block->image)

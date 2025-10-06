@@ -55,3 +55,33 @@ fields:
       always_save: false
       if:
         show_icon: 'equals true'
+  -
+    handle: special_action
+    field:
+      type: toggle
+      display: 'Special action'
+      width: 33
+  -
+    handle: special_action_type
+    field:
+      options:
+        -
+          key: modal
+          value: 'Open Modal Screen'
+        -
+          key: custom
+          value: 'Custom JS code'
+      default: custom
+      type: button_group
+      display: 'Special Action Type'
+      width: 66
+      if:
+        special_action: 'equals true'
+  -
+    handle: custom_action
+    field:
+      mode: javascript
+      type: code
+      display: Value
+      if:
+        special_action: 'equals true'

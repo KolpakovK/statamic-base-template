@@ -1,4 +1,4 @@
-<div class="wrapper one-column-wrapper {{ $block->block_settings->block_classes ?? '' }}">
+<div class="wrapper one-column-wrapper {{ $block->block_settings->block_classes ?? '' }}" id="{{ $block->block_settings->block_id ?? '' }}">
     <section class="block one-column-block" style="{{ $block->block_settings->block_styles ?? '' }}">
         <div class="container py-8 {{ $block->block_settings->container_classes ?? '' }}" style="{{ $block->block_settings->container_styles ?? '' }}">
             <div class="flex flex-col gap-12 w-full mx-auto max-w-5xl">

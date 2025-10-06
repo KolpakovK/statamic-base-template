@@ -1,4 +1,4 @@
-<div class="wrapper manual-columns-wrapper {{ $block->block_settings->block_classes ?? '' }}">
+<div class="wrapper manual-columns-wrapper {{ $block->block_settings->block_classes ?? '' }}" id="{{ $block->block_settings->block_id ?? '' }}">
     <section class="block manual-columns-block" style="{{ $block->block_settings->block_styles ?? '' }}">
         <div class="container manual-columns-container py-8 flex-col flex lg:grid gap-6 {{ $block->block_settings->container_classes ?? '' }}"
         style="grid-template-columns: repeat({{ $block->amount_columns ?? 2 }}, minmax(0, 1fr)); {{ $block->block_settings->container_styles ?? '' }}">

@@ -40,3 +40,22 @@ tabs:
           -
             import: buttons
             prefix: footer_
+      -
+        display: Modals
+        fields:
+          -
+            handle: modals
+            field:
+              collapse: true
+              button_label: 'Add Modal'
+              type: replicator
+              display: Modals
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    modal:
+                      display: Modal
+                      fields:
+                        -
+                          import: modal

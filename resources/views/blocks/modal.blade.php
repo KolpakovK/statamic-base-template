@@ -1,0 +1,1 @@
+<x-modal :modal_id="$block->modal_id" :blocks="$block->modal_blocks" />

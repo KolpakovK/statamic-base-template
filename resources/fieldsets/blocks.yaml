@@ -467,6 +467,12 @@ fields:
                                 import: card
                 -
                   import: block_settings
+            modal:
+              display: Modal
+              icon: programming-script-code-brackets
+              fields:
+                -
+                  import: modal
         special:
           display: Special
           icon: shopping-store-discount-percent

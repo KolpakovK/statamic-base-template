@@ -20,4 +20,35 @@ trackers_production: true
 use_google_site_verification: false
 use_fathom: false
 use_cloudflare_web_analytics: false
-tracker_type: none
+tracker_type: gtag
+google_analytics: '12312312'
+anonymize_ip: true
+use_cookie_dialog: true
+cookie:
+  title: Test
+  description: Test
+  accept_label: 'Accept All'
+  reject_label: Reject
+  accept_selected_label: 'Accept Selected'
+  settings_label: Settings
+  reset_consent_label: Reset
+  consent_types:
+    -
+      id: mg9y7sfm
+      label: Functional
+      description: "First party cookies needed for the website to function. These can't be turned off."
+      value: true
+      consent_api: false
+      name: functionalCookies
+      type: functional
+      enabled: true
+    -
+      id: mg9y7uiw
+      label: Analytics
+      description: 'We use data collected by Google Analytics to make our site work better.'
+      value: false
+      consent_api: true
+      name: analyticsStorage
+      consent_api_handle: analytics_storage
+      type: analytics
+      enabled: true

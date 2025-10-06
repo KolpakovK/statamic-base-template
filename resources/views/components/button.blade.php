@@ -7,6 +7,9 @@
     'position' => 'left',
     'type' => 'button',
     'class' => '',
+    'special_action' => false,
+    'special_action_type' => '',
+    'custom_action' => null,
 ])
 
 @if($label || $icon)
@@ -14,7 +17,7 @@
         $variant = is_object($variant) ? (string) $variant : $variant;
     @endphp
     
-    @if($link)
+    @if($link != null && $link != '')
         <a
     @else
         <button type="{{ $type }}"
@@ -37,6 +40,16 @@
                 $class,
             ])
         }}
+
+        @if($special_action)
+            @if($special_action_type === 'modal' && $custom_action)
+                onclick="openModal('{{ $custom_action }}')"
+            @elseif($special_action_type === 'dropdown' && $custom_action)
+                onclick="toggleDropdown('{{ $custom_action }}')"
+            @elseif($custom_action)
+                onclick="{{ $custom_action }}"
+            @endif
+        @endif
 
         @if($link)
             href="{{ $link }}"

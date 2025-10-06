@@ -1,4 +1,4 @@
-<div class="wrapper blog-grid-wrapper {{ $block->block_settings->block_classes ?? '' }}">
+<div class="wrapper blog-grid-wrapper {{ $block->block_settings->block_classes ?? '' }}" id="{{ $block->block_settings->block_id ?? '' }}">
     <section class="block blog-grid blog-grid-block" style="{{ $block->block_settings->block_styles ?? '' }}">
         <div class="container py-8 blog-grid-container {{ $block->block_settings->container_classes ?? '' }}" style="{{ $block->block_settings->container_styles ?? '' }}">
             @if ($block->query->value() === 'custom')

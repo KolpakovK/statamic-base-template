@@ -6,13 +6,13 @@
      (config('app.env') == 'staging' && $seo->trackers_staging) ||
      (config('app.env') == 'production' && $seo->trackers_production))
 )
-<div id="cookie-consent" class="cookie-consent hidden fixed inset-x-0 bottom-0 z-50 p-4">
-    <div class="bg-card text-card-foreground rounded-panel-md shadow-custom-lg p-6 max-w-md mx-auto">
-        <h3 class="text-lg font-semibold mb-3">
+<div id="cookie-consent" class="cookie-consent flex hidden fixed inset-x-0 bottom-0 z-50 p-4 h-screen  items-center justify-center">
+    <div class="bg-card text-card-foreground rounded-panel-sm shadow-custom-lg p-6 max-w-md mx-auto">
+        <h3 class="text-3xl font-semibold mb-3">
             {{ $seo->cookie['title'] ?? 'Cookie Consent' }}
         </h3>
         
-        <div class="text-sm text-muted-foreground mb-4">
+        <div class="text-base text-muted-foreground mb-4">
             {!! $seo->cookie['description'] ?? 'We use cookies to enhance your browsing experience.' !!}
         </div>
 
@@ -26,11 +26,11 @@
                             value="{{ $type['name'] }}"
                             {{ $type['value'] ? 'checked' : '' }}
                             {{ $type['name'] === 'functionalCookies' ? 'disabled' : '' }}
-                            class="rounded border-default"
+                            class="rounded border-default checked:bg-primary/10 checked:border-primary"
                         >
                         <div class="flex-1">
-                            <div class="font-medium text-sm">{{ $type['label'] }}</div>
-                            <div class="text-xs text-muted-foreground">{{ $type['description'] }}</div>
+                            <div class="font-medium text-base">{{ $type['label'] }}</div>
+                            <div class="text-sm text-muted-foreground">{{ $type['description'] }}</div>
                         </div>
                     </label>
                 @endforeach
@@ -40,21 +40,21 @@
         <div class="flex gap-2 flex-wrap">
             <button 
                 onclick="acceptAllCookies()" 
-                class="bg-primary text-primary-foreground rounded-button px-4 py-2 text-sm duration-normal hover:opacity-90"
+                class="btn btn--primary"
             >
                 {{ $seo->cookie['accept_label'] ?? 'Accept All' }}
             </button>
             
             <button 
                 onclick="acceptSelectedCookies()" 
-                class="bg-muted text-foreground rounded-button px-4 py-2 text-sm duration-normal"
+                class="btn btn--muted"
             >
                 {{ $seo->cookie['accept_selected_label'] ?? 'Accept Selected' }}
             </button>
             
             <button 
                 onclick="rejectCookies()" 
-                class="bg-background text-foreground border border-default rounded-button px-4 py-2 text-sm duration-normal"
+                class="btn btn--destructive"
             >
                 {{ $seo->cookie['reject_label'] ?? 'Reject All' }}
             </button>
@@ -63,6 +63,27 @@
 </div>
 
 <script>
+// Глобальные функции для управления cookies
+window.showCookieSettings = function() {
+    // Восстанавливаем текущие настройки
+    const currentConsent = JSON.parse(localStorage.getItem('cookie-consent') || '{}');
+    
+    document.querySelectorAll('[name^="consent-"]').forEach(input => {
+        const consentName = input.value;
+        if (currentConsent.hasOwnProperty(consentName)) {
+            input.checked = currentConsent[consentName];
+        }
+    });
+    
+    document.getElementById('cookie-consent').classList.remove('hidden');
+};
+
+window.resetCookieConsent = function() {
+    localStorage.removeItem('cookie-consent');
+    localStorage.removeItem('cookie-consent-date');
+    location.reload();
+};
+
 document.addEventListener('DOMContentLoaded', function() {
     // Проверяем, нужно ли показывать диалог
     const consentGiven = localStorage.getItem('cookie-consent');
@@ -148,12 +169,7 @@ function hideCookieDialog() {
     document.getElementById('cookie-consent').classList.add('hidden');
 }
 
-// Функция для сброса согласия (можно вызвать из консоли или добавить кнопку)
-function resetCookieConsent() {
-    localStorage.removeItem('cookie-consent');
-    localStorage.removeItem('cookie-consent-date');
-    location.reload();
-}
+
 </script>
 
 <style>

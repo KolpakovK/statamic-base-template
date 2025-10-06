@@ -61,7 +61,11 @@ return [
         [ 
             'type' => 'updater',
             'width' => 50,
-        ], 
+        ],
+        [
+            'type' => 'technical_support',
+            'width' => 100,
+        ],
     ],
 
     /*

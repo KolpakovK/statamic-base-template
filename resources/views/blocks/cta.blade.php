@@ -1,4 +1,4 @@
-<div class="wrapper cta-wrapper {{ $block->block_settings->block_classes ?? '' }}">
+<div class="wrapper cta-wrapper {{ $block->block_settings->block_classes ?? '' }}" id="{{ $block->block_settings->block_id ?? '' }}">
     <section class="block cta-block bg-background" style="{{ $block->block_settings->block_styles ?? '' }}">
         <div class="container cta-container flex flex-col gap-12 py-8 
         {{ $block->block_settings->container_classes ?? '' }}

@@ -55,7 +55,7 @@
         </div>
     </div>
 
-    <div class="container mx-auto py-6 px-2 flex justify-start lg:justify-end gap-8 border-t border-border">
+    <div class="container mx-auto py-6 px-2 flex items-center justify-start lg:justify-end gap-8 border-t border-border">
         @if($misc->footer_details)
             <p class="text-base text-foreground-secondary">
                 {!! $misc->footer_details !!}
@@ -71,6 +71,9 @@
                         :variant="$button->variant" 
                         :show_icon="$button->show_icon"
                         :icon="$button->icon ?? null"
+                        :special_action="$button->special_action"
+                        :special_action_type="$button->special_action_type"
+                        :custom_action="$button->custom_action ?? null"
                     />
                 @endforeach
             </div>

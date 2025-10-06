@@ -1,0 +1,164 @@
+title: Modal
+fields:
+  -
+    handle: modal_id
+    field:
+      type: text
+      display: 'Modal ID'
+  -
+    handle: modal_blocks
+    field:
+      collapse: true
+      type: replicator
+      display: 'Modal Blocks'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            article:
+              display: Article
+              instructions: 'Long form content with rich media'
+              icon: text-formatting-markdown
+              fields:
+                -
+                  import: article
+                -
+                  import: block_settings
+            manual_columns:
+              display: 'Manual Columns'
+              icon: add-col-after
+              fields:
+                -
+                  handle: amount_columns
+                  field:
+                    max: 6
+                    default: 1
+                    type: range
+                    display: 'Amount Columns'
+                -
+                  handle: columns
+                  field:
+                    collapse: true
+                    button_label: 'Add Column'
+                    type: replicator
+                    display: Columns
+                    sets:
+                      new_set_group:
+                        display: 'New Set Group'
+                        sets:
+                          generic:
+                            display: Generic
+                            icon: hero-image-above-text
+                            fields:
+                              -
+                                handle: col_span
+                                field:
+                                  input_type: number
+                                  default: '1'
+                                  type: text
+                                  display: 'Col Span'
+                                  width: 50
+                              -
+                                import: heading
+                              -
+                                import: article
+                              -
+                                import: buttons
+                              -
+                                handle: cards_group
+                                field:
+                                  type: group
+                                  display: Cards
+                                  fields:
+                                    -
+                                      handle: cards_columns
+                                      field:
+                                        max: 6
+                                        default: 1
+                                        type: range
+                                        display: 'Cards Columns'
+                                        width: 50
+                                    -
+                                      handle: cards
+                                      field:
+                                        collapse: true
+                                        button_label: 'Add Card'
+                                        type: replicator
+                                        display: Cards
+                                        sets:
+                                          new_set_group:
+                                            display: 'New Set Group'
+                                            sets:
+                                              card:
+                                                display: Card
+                                                fields:
+                                                  -
+                                                    import: card
+                          cards_grid:
+                            display: 'Cards Grid'
+                            icon: container-add
+                            fields:
+                              -
+                                handle: col_span
+                                field:
+                                  input_type: number
+                                  default: '1'
+                                  type: text
+                                  display: 'Col Span'
+                                  width: 50
+                              -
+                                handle: amount_columns
+                                field:
+                                  max: 6
+                                  default: 1
+                                  type: range
+                                  display: 'Amount Columns'
+                              -
+                                handle: cards
+                                field:
+                                  collapse: true
+                                  button_label: 'Add Card'
+                                  type: replicator
+                                  display: Cards
+                                  sets:
+                                    new_set_group:
+                                      display: 'New Set Group'
+                                      sets:
+                                        card:
+                                          display: Card
+                                          fields:
+                                            -
+                                              import: card
+                          image:
+                            display: Image
+                            icon: hero-image-screen-curved
+                            fields:
+                              -
+                                handle: col_span
+                                field:
+                                  input_type: number
+                                  default: '1'
+                                  type: text
+                                  display: 'Col Span'
+                                  width: 50
+                              -
+                                import: picture
+                          form:
+                            display: Form
+                            icon: form-text-field
+                            fields:
+                              -
+                                handle: col_span
+                                field:
+                                  default: '1'
+                                  type: text
+                                  display: 'Col Span'
+                                  width: 50
+                              -
+                                handle: form
+                                field:
+                                  max_items: 1
+                                  type: form
+                                  display: Form
+                -
+                  import: block_settings

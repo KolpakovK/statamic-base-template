@@ -8,7 +8,7 @@ seo_noindex: false
 seo_nofollow: false
 seo_canonical_type: entry
 updated_by: f9af95ec-86dd-4779-927c-e2e325f894ee
-updated_at: 1759316177
+updated_at: 1759709417
 blocks:
   -
     id: mg3qnm63
@@ -28,6 +28,7 @@ blocks:
         enabled: true
         icon: ti-rocket
         link: 'entry::b92ec423-844f-441b-b318-67bb15fce82a'
+        special_action: false
       -
         id: mg3y7b78
         label: 'Read Docs'
@@ -37,6 +38,7 @@ blocks:
         type: button
         enabled: true
         link: 'entry::6c344b2e-fb45-4cd3-964a-a0755bfb60ea'
+        special_action: false
     image: images/hero.jpg
     image_scaling: cover
     display_additional_blocks_settings: true
@@ -142,6 +144,8 @@ blocks:
               article:
                 -
                   type: paragraph
+                  attrs:
+                    textAlign: null
                   content:
                     -
                       type: text
@@ -431,6 +435,7 @@ blocks:
         type: button
         enabled: true
         link: 'entry::b92ec423-844f-441b-b318-67bb15fce82a'
+        special_action: false
     display_additional_blocks_settings: false
     type: cta
     enabled: true

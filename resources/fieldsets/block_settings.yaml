@@ -14,6 +14,11 @@ fields:
         display_additional_blocks_settings: 'equals true'
       fields:
         -
+          handle: block_id
+          field:
+            type: text
+            display: 'Block ID'
+        -
           handle: block_classes
           field:
             type: code

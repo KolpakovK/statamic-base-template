@@ -9,6 +9,7 @@ buttons:
     enabled: true
     icon: ti-file-type-doc
     link: 'entry::6c344b2e-fb45-4cd3-964a-a0755bfb60ea'
+    special_action: false
   -
     id: mg43cal0
     label: 'Get Started'
@@ -18,5 +19,406 @@ buttons:
     enabled: true
     icon: ti-rocket
     link: 'entry::b92ec423-844f-441b-b318-67bb15fce82a'
+    special_action: false
 caption: 'Production-ready solution for creating modern websites using the latest technologies.'
 footer_details: 'All rights reserved © Snaga - 2025'
+footer_buttons:
+  -
+    id: mg9yizcz
+    label: 'Reset Cookies'
+    variant: link
+    show_icon: false
+    special_action: true
+    special_action_type: custom
+    custom_action:
+      code: showCookieSettings()
+      mode: javascript
+    type: button
+    enabled: true
+  -
+    id: mgedjhgz
+    label: 'Open test modal'
+    variant: primary
+    show_icon: false
+    special_action: true
+    special_action_type: modal
+    custom_action:
+      code: test
+      mode: javascript
+    type: button
+    enabled: true
+modals:
+  -
+    id: mgeczznb
+    modal_id: test
+    modal_blocks:
+      -
+        id: mged0cne
+        article:
+          -
+            type: heading
+            attrs:
+              textAlign: null
+              level: 2
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Statamic 6 Base Template'
+          -
+            type: horizontalRule
+          -
+            type: heading
+            attrs:
+              textAlign: null
+              level: 3
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Modern Starter Template for Professional Development'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Statamic 6 Base Template'
+              -
+                type: text
+                text: ' is a production-ready solution for creating modern websites using the latest technologies. The template combines the power of Statamic CMS, the flexibility of Tailwind CSS 4, and the interactivity of Alpine.js.'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+          -
+            type: heading
+            attrs:
+              textAlign: null
+              level: 5
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'What is it?'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                text: "This is not just a template — it's a complete ecosystem for developing web projects of any complexity. From corporate websites to e-commerce stores, from landing pages to complex web applications."
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+          -
+            type: heading
+            attrs:
+              textAlign: null
+              level: 5
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Who is it for?'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                text: '- '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Web developers'
+              -
+                type: text
+                text: ' who value quality code'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                text: '- '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: Agencies
+              -
+                type: text
+                text: ' that need fast and reliable solutions'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                text: '- '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: Freelancers
+              -
+                type: text
+                text: ' striving for professional results'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                text: '- '
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: Companies
+              -
+                type: text
+                text: ' wanting to get a modern website'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+          -
+            type: heading
+            attrs:
+              textAlign: null
+              level: 5
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Why choose our template?'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: '🚀 Ready to work out of the box'
+              -
+                type: text
+                text: ' — install and immediately start creating content'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: '🎨 Full customization'
+              -
+                type: text
+                text: ' — change colors, fonts and styles through the admin panel'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: '📱 Responsive design'
+              -
+                type: text
+                text: ' — looks perfect on all devices'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: '⚡ High performance'
+              -
+                type: text
+                text: ' — optimized for loading speed'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: '🔧 Modular architecture'
+              -
+                type: text
+                text: ' — easily expandable and modifiable'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+          -
+            type: heading
+            attrs:
+              textAlign: null
+              level: 5
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Technology Stack'
+          -
+            type: bulletList
+            content:
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    attrs:
+                      textAlign: null
+                    content:
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: bold
+                        text: 'Statamic 6'
+                      -
+                        type: text
+                        text: ' — modern CMS based on Laravel'
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    attrs:
+                      textAlign: null
+                    content:
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: bold
+                        text: 'PHP 8.2+'
+                      -
+                        type: text
+                        text: ' — latest PHP version with improved performance'
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    attrs:
+                      textAlign: null
+                    content:
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: bold
+                        text: 'Tailwind CSS 4'
+                      -
+                        type: text
+                        text: ' — utility-first CSS framework'
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    attrs:
+                      textAlign: null
+                    content:
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: bold
+                        text: Alpine.js
+                      -
+                        type: text
+                        text: ' — lightweight JavaScript framework'
+              -
+                type: listItem
+                content:
+                  -
+                    type: paragraph
+                    attrs:
+                      textAlign: null
+                    content:
+                      -
+                        type: text
+                        marks:
+                          -
+                            type: bold
+                        text: Vite
+                      -
+                        type: text
+                        text: ' — modern bundler with hot reload'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+          -
+            type: heading
+            attrs:
+              textAlign: null
+              level: 5
+            content:
+              -
+                type: text
+                marks:
+                  -
+                    type: bold
+                text: 'Start Today'
+          -
+            type: paragraph
+            attrs:
+              textAlign: null
+            content:
+              -
+                type: text
+                text: 'Get a ready-made solution and focus on creating unique content instead of writing basic code.'
+        display_additional_blocks_settings: false
+        type: article
+        enabled: true
+    type: modal
+    enabled: true

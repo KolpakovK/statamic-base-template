@@ -1,4 +1,4 @@
-<div class="wrapper simple-hero-wrapper {{ $block->block_settings->block_classes ?? '' }}" >
+<div class="wrapper simple-hero-wrapper {{ $block->block_settings->block_classes ?? '' }}" id="{{ $block->block_settings->block_id ?? '' }}">
     <section class="block bg-background hero-section simple-hero-block" style="{{ $block->block_settings->block_styles ?? '' }}">
         <div class="container py-8 flex flex-col gap-8 simple-hero-container {{ $block->block_settings->container_classes ?? '' }}" style="{{ $block->block_settings->container_styles ?? '' }}">
             <div class="flex flex-col gap-4 w-full max-w-3xl text-center mx-auto simple-hero-content">
