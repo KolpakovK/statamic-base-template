@@ -6,7 +6,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 
-class RebuildStylesController extends Controller
+class RebuildStylesControllerBackup extends Controller
 {
     public function execute(Request $request): JsonResponse
     {
@@ -14,14 +14,14 @@ class RebuildStylesController extends Controller
         $allSuccessful = true;
 
         try {
-            // 1. Build styles using shell_exec approach
+            // 1. Build styles using shell_exec as fallback
             $results[] = 'Building styles...';
             
             $workingDirectory = base_path();
             $oldDir = getcwd();
             chdir($workingDirectory);
             
-            // Try different build approaches for cross-platform compatibility
+            // Try different approaches
             $buildCommands = [
                 'npm run build 2>&1',
                 'npx vite build 2>&1',
@@ -34,20 +34,17 @@ class RebuildStylesController extends Controller
             foreach ($buildCommands as $command) {
                 $output = shell_exec($command);
                 
-                // Check if build was successful
-                if ($output && !stripos($output, 'not found') && !stripos($output, 'command not found') && !stripos($output, 'error:')) {
-                    // Additional check for successful build indicators
-                    if (stripos($output, 'built in') !== false || stripos($output, 'build completed') !== false || stripos($output, '✓') !== false) {
-                        $results[] = '✓ Styles built successfully';
-                        $buildSuccess = true;
-                        break;
-                    }
+                if ($output && !stripos($output, 'not found') && !stripos($output, 'error')) {
+                    $results[] = '✓ Styles built successfully';
+                    $buildSuccess = true;
+                    break;
+                } else {
+                    $lastError = $output;
                 }
-                $lastError = $output ?: 'Command failed silently';
             }
             
             if (!$buildSuccess) {
-                $results[] = '✗ Build failed: ' . trim($lastError);
+                $results[] = '✗ Build failed: ' . $lastError;
                 $allSuccessful = false;
             }
             
