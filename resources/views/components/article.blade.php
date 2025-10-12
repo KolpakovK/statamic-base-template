@@ -3,7 +3,7 @@
 ])
 
 @if($article)
-    <div {{ $attributes->class(['article', 'article-component']) }}>
+    <div {{ $attributes->class(['article', 'article-component' ]) }}>
         <div class="article-content">
             @foreach($article as $item)
                 {{-- Handle different types of article content --}}

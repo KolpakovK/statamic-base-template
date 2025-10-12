@@ -305,6 +305,10 @@ fields:
                                                 fields:
                                                   -
                                                     import: card
+                                    -
+                                      import: dev_details
+                              -
+                                import: dev_details
                           cards_grid:
                             display: 'Cards Grid'
                             icon: container-add
@@ -340,6 +344,8 @@ fields:
                                           fields:
                                             -
                                               import: card
+                              -
+                                import: dev_details
                           image:
                             display: Image
                             icon: hero-image-screen-curved
@@ -354,6 +360,8 @@ fields:
                                   width: 50
                               -
                                 import: picture
+                              -
+                                import: dev_details
                           form:
                             display: Form
                             icon: form-text-field
@@ -371,6 +379,8 @@ fields:
                                   max_items: 1
                                   type: form
                                   display: Form
+                              -
+                                import: dev_details
                 -
                   import: block_settings
         media:

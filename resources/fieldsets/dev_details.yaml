@@ -1,0 +1,28 @@
+title: 'Dev Details'
+fields:
+  -
+    handle: show_dev_settings
+    field:
+      type: toggle
+      display: 'Show Dev Settings'
+  -
+    handle: dev_details
+    field:
+      type: group
+      display: 'Dev Details'
+      if:
+        show_dev_settings: 'equals true'
+      fields:
+        -
+          handle: class
+          field:
+            mode: css
+            type: code
+            display: Class
+            width: 33
+        -
+          handle: attributes
+          field:
+            type: code
+            display: Attributes
+            width: 66

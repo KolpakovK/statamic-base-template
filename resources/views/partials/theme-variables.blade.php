@@ -94,6 +94,45 @@
             @if($theme->primary_foreground_dark)--color-primary-foreground: {{ $theme->primary_foreground_dark }};@endif
             @if($theme->border_dark)--color-border: {{ $theme->border_dark }};@endif
         }
+
+        .light{
+            @if($theme->background)--color-background: {{ $theme->background }};@endif
+            @if($theme->background_secondary)--color-background-secondary: {{ $theme->background_secondary }};@endif
+            @if($theme->background_muted)--color-background-muted: {{ $theme->background_muted }};@endif
+
+            /* Text colors */
+            @if($theme->foreground)--color-foreground: {{ $theme->foreground }};@endif
+            @if($theme->foreground_secondary)--color-foreground-secondary: {{ $theme->foreground_secondary }};@endif
+            @if($theme->foreground_muted)--color-foreground-muted: {{ $theme->foreground_muted }};@endif
+
+            /* Primary colors */
+            @if($theme->primary)--color-primary: {{ $theme->primary }};@endif
+            @if($theme->primary_foreground)--color-primary-foreground: {{ $theme->primary_foreground }};@endif
+            @if($theme->primary_hover)--color-primary-hover: {{ $theme->primary_hover }};@endif
+
+            /* Semantic colors */
+            @if($theme->success)--color-success: {{ $theme->success }};@endif
+            @if($theme->success_foreground)--color-success-foreground: {{ $theme->success_foreground }};@endif
+            @if($theme->success_hover)--color-success-hover: {{ $theme->success_hover }};@endif
+            @if($theme->destructive)--color-destructive: {{ $theme->destructive }};@endif
+            @if($theme->destructive_foreground)--color-destructive-foreground: {{ $theme->destructive_foreground }};@endif
+            @if($theme->destructive_hover)--color-destructive-hover: {{ $theme->destructive_hover }};@endif
+            @if($theme->info)--color-info: {{ $theme->info }};@endif
+            @if($theme->info_foreground)--color-info-foreground: {{ $theme->info_foreground }};@endif
+            @if($theme->info_hover)--color-info-hover: {{ $theme->info_hover }};@endif
+            @if($theme->warning)--color-warning: {{ $theme->warning }};@endif
+            @if($theme->warning_foreground)--color-warning-foreground: {{ $theme->warning_foreground }};@endif
+            @if($theme->warning_hover)--color-warning-hover: {{ $theme->warning_hover }};@endif
+
+            /* UI colors */
+            @if($theme->border)--color-border: {{ $theme->border }};@endif
+            @if($theme->card)--color-card: {{ $theme->card }};@endif
+            @if($theme->card_foreground)--color-card-foreground: {{ $theme->card_foreground }};@endif
+            @if($theme->muted)--color-muted: {{ $theme->muted }};@endif
+            @if($theme->muted_foreground)--color-muted-foreground: {{ $theme->muted_foreground }};@endif
+            @if($theme->accent)--color-accent: {{ $theme->accent }};@endif
+            @if($theme->accent_foreground)--color-accent-foreground: {{ $theme->accent_foreground }};@endif
+        }
     }
 </style>
 @endif
