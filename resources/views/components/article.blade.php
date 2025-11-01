@@ -38,6 +38,13 @@
                     <div class="article__media">
                         <x-picture :image="$item['image']" :contain="$item['image_scaling'] == 'contain'" :cover="$item['image_scaling'] == 'cover'" class="aspect-[16/9]" :w="$item['image_width']" :h="$item['image_height']"/>
                     </div>
+
+                @elseif($item['type'] === 'accordion')
+                    {{-- Accordion sets --}}
+                    <div class="article__accordion">
+                        <x-accordion :items="$item['accordion']['items']"/>
+                    </div>
+
                 
                 @else
                     {{-- Fallback for unknown types --}}

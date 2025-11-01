@@ -1,0 +1,51 @@
+title: 'Accordion Component'
+fields:
+  -
+    handle: accordion
+    field:
+      type: group
+      display: Accordion
+      instructions: 'Accordions allow you to organize a stack of items that can be expanded or collapsed, revealing or hiding additional content.'
+      fields:
+        -
+          handle: items
+          field:
+            type: replicator
+            display: Items
+            sets:
+              new_set_group:
+                display: 'New Set Group'
+                sets:
+                  item:
+                    display: Item
+                    fields:
+                      -
+                        handle: title
+                        field:
+                          type: text
+                          display: Title
+                      -
+                        handle: data
+                        field:
+                          buttons:
+                            - h2
+                            - h3
+                            - h4
+                            - h5
+                            - h6
+                            - bold
+                            - italic
+                            - unorderedlist
+                            - orderedlist
+                            - removeformat
+                            - quote
+                            - anchor
+                            - table
+                            - code
+                            - codeblock
+                            - horizontalrule
+                          remove_empty_nodes: false
+                          type: bard
+                          display: Data
+        -
+          import: dev_details

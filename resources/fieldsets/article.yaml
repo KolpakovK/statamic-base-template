@@ -54,3 +54,8 @@ fields:
               fields:
                 -
                   import: buttons
+            accordion:
+              display: Accordion
+              fields:
+                -
+                  import: accordion_component
