@@ -5,6 +5,7 @@ preferences:
   collections:
     pages:
       after_save: continue_editing
+      view: tree
   assets:
     assets:
       columns:

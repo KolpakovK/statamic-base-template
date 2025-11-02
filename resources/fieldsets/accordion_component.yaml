@@ -18,12 +18,14 @@ fields:
                 sets:
                   item:
                     display: Item
+                    image: null
                     fields:
                       -
                         handle: title
                         field:
                           type: text
                           display: Title
+                          instructions: 'The text that will be displayed in the header format.'
                       -
                         handle: data
                         field:
@@ -47,5 +49,6 @@ fields:
                           remove_empty_nodes: false
                           type: bard
                           display: Data
+                          instructions: 'Text content in rich text format that will be displayed when the object is active.'
         -
           import: dev_details

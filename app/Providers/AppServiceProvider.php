@@ -27,9 +27,9 @@ class AppServiceProvider extends ServiceProvider
             });
         });
 
-        // Statamic::vite('app', [
-        //     'resources/js/cp.js',
-        //     'resources/css/cp.css',
-        // ]);
+        Statamic::vite('app', [
+            'resources/js/cp.js',
+            'resources/css/cp.css',
+        ]);
     }
 }
